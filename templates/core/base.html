@@ -90,7 +90,7 @@
                      </div>
                      <a class="dropdown-item" href="profile.html">My Profile</a>
                      <a class="dropdown-item" href="inbox.html">Inbox</a>
-                     <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                     {% comment %} <a class="dropdown-item" href="{% url 'logout' %}">Logout</a> {% endcomment %}
                   </div>
                </li>
             </ul>
@@ -113,9 +113,9 @@
                      <li class="submenu">
                         <a href="#"><i class="fas fa-user-graduate"></i> <span> Students</span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="{% url 'student_list' %}">Student List</a></li>
+                           {% comment %} <li><a href="{% url 'student_list' %}">Student List</a></li> {% endcomment %}
                            <li><a href="student-details.html">Student View</a></li>
-                           <li><a href="{% url 'add_student' %}">Student Add</a></li>
+                           {% comment %} <li><a href="{% url 'add_student' %}">Student Add</a></li> {% endcomment %}
                            <li><a href="edit-student.html">Student Edit</a></li>
                         </ul>
                      </li>
@@ -182,9 +182,9 @@
                      <li class="submenu">
                         <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
                         <ul>
-                           <li><a href="{% url 'login' %}">Login</a></li>
-                           <li><a href="{% url 'signup' %}">Register</a></li>
-                           <li><a href="{% url 'forgot-password' %}">Forgot Password</a></li>
+                           {% comment %} <li><a href="{% url 'login' %}">Login</a></li> {% endcomment %}
+                           {% comment %} <li><a href="{% url 'signup' %}">Register</a></li> {% endcomment %}
+                           {% comment %} <li><a href="{% url 'forgot-password' %}">Forgot Password</a></li> {% endcomment %}
                            <li><a href="error-404.html">Error Page</a></li>
                         </ul>
                      </li>
@@ -273,7 +273,7 @@
               if (notiDropdown) {
                   // Add a click event listener to the notification dropdown
                   notiDropdown.addEventListener('click', function() {
-                      const url = "{% url 'mark_notifications_as_read' %}";
+                      {% comment %} const url = "{% url 'mark_notifications_as_read' %}"; {% endcomment %}
       
                       // Use the Fetch API to send a POST request to mark notifications as read
                       fetch(url, {
@@ -302,7 +302,7 @@
               if (clearAllBtn) {
                   // Add a click event listener to the "Clear All" button
                   clearAllBtn.addEventListener('click', function() {
-                      const clearUrl = "{% url 'clear_all_notifications' %}";  // Ensure this URL points to the correct view
+                      {% comment %} const clearUrl = "{% url 'clear_all_notifications' %}";  // Ensure this URL points to the correct view {% endcomment %}
       
                       // Use Fetch to send a POST request to clear all notifications
                       fetch(clearUrl, {

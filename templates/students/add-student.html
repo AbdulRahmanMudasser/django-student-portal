@@ -9,7 +9,7 @@
                      <div class="col">
                         <h3 class="page-title">Add Students</h3>
                         <ul class="breadcrumb">
-                           {% comment %} <li class="breadcrumb-item"><a href="{% url 'student_list' %}">Students</a></li> {% endcomment %}
+                           <li class="breadcrumb-item"><a href="{% url 'students_list' %}">Students</a></li>
                            <li class="breadcrumb-item active">Add Students</li>
                         </ul>
                      </div>
@@ -19,7 +19,7 @@
                   <div class="col-sm-12">
                      <div class="card">
                         <div class="card-body">
-                           <form method="POST"   enctype="multipart/form-data">
+                           <form method="POST" enctype="multipart/form-data">
                               {% csrf_token %}
                               <div class="row">
                                  <div class="col-12">

@@ -8,6 +8,7 @@ class Parent(models.Model):
     father_phone = models.CharField(max_length=15)
     father_email = models.CharField(max_length=100)
     mother_name = models.CharField(max_length=100)
+    mother_occupation = models.CharField(max_length=100)
     mother_email = models.CharField(max_length=100)
     mother_phone = models.CharField(max_length=15)
     present_address = models.TextField()
